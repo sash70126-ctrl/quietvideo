@@ -5,13 +5,11 @@
   <title>QuietVideo – watch quietly</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Analytics (FINAL CLEAN VERSION) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8CVQL1CVK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-W8CVQL1CVK');
+  <!-- Umami Analytics -->
+  <script
+    defer
+    src="https://cloud.umami.is/script.js"
+    data-website-id="0c47839d-0b69-49c4-a5ab-7b7ab699cc2d">
   </script>
 
   <style>
@@ -120,8 +118,17 @@
     <div class="line">You can just be here.</div>
     <div class="people">2 people stayed a moment</div>
 
-    <button class="btn btn-quiet">👀 Watch quietly</button>
-    <button class="btn btn-video">🎥 Try video (no camera)</button>
+    <button
+      class="btn btn-quiet"
+      onclick="umami.track('watch_quietly')">
+      👀 Watch quietly
+    </button>
+
+    <button
+      class="btn btn-video"
+      onclick="umami.track('try_video')">
+      🎥 Try video (no camera)
+    </button>
 
     <div class="footer">
       No sign-up · No commitment · Leave anytime
@@ -129,5 +136,6 @@
   </div>
 </body>
 </html>
+
 
 
